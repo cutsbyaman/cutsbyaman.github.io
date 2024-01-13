@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MotionScope - A Quality Video Solutions</title>
+  <link rel="icon" href="https://i.postimg.cc/s2kGyPNH/mslogo-white-2x.png" sizes="128x128" type="image/png">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: black;
+    }
+
+    .firstIntro {
+      height: 100vh;
+      background: linear-gradient(rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/sxC1WVPV/Whats-App-Image-2023-11-24-at-10-39-30-PM.jpg') center center/cover no-repeat;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0px 70px;
+    }
+
+    .tittle {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .motion {
+      font-size: 6em;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    #element {
+      font-weight: 200;
+    }
+
+    .section2 {
+      padding: 5% 20%;
+      background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/yY5H2Svv/IMG-0878.jpg') fixed center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .section2 h1 {
+      font-size: 3em;
+      font-weight: 600;
+    }
+
+    .imgBox {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      padding: 5%;
+    }
+
+    .card video {
+      border-radius: 15px;
+    }
+
+    .section3 {
+      padding: 5% 5%;
+      background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/HxQDyZgN/IMG-0879.jpg') fixed center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .section3 h1 {
+      font-size: 3em;
+      font-weight: 600;
+    }
+
+    .meeting {
+      padding: 5% 5% 0% 5%;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .meetingText {
+      font-size: 3em;
+      font-weight: 600;
+    }
+
+    .meetingBtn {
+      background-color: #666dfa;
+      border-radius: 15px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 72px;
+    }
+
+    .imgBox3 {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card3 {
+      padding: 5%;
+    }
+
+    .card3 video {
+      border-radius: 15px;
+    }
+
+    .card3 p {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .section4 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 5% 10%;
+    }
+
+    .thumbnail {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .section4 iframe {
+      margin: 1%;
+      border-radius: 15px;
+    }
+
+    .manyMore {
+      font-size: 3em;
+      font-weight: 600;
+      color: white;
+
+    }
+
+    .logoFooter {
+      width: 210px;
+      height: 120px;
+    }
+
+    .thumbnail img {
+      width: 32%;
+      margin: 1%;
+      border-radius: 15px;
+    }
+
+    .thumbnail {
+      color: white;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .firstIntro {
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+
+      .meetingText {
+        font-size: 34px;
+      }
+
+      .meetingBtn {
+        height: 100px;
+        width: 135px;
+      }
+
+      .motion {
+        font-size: 2em;
+      }
+
+      #element {
+        font-size: 18px;
+      }
+
+      .imgBox {
+        flex-direction: column;
+      }
+
+      .section2 p,
+      .thumbnail p {
+        font-size: 12px;
+      }
+
+      .section2 h1 {
+        font-size: 39px;
+        line-height: 1.1;
+        margin-bottom: 5%;
+      }
+
+      .section3 h1,
+      #meetingText {
+        font-size: 20px;
+      }
+
+      .card3 video {
+        border-radius: 7px;
+      }
+
+      .card3 p {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .section3 p {
+        font-size: 12px;
+        margin-bottom: 5%;
+      }
+
+      .section3 {
+        padding: 3%;
+        background: none;
+      }
+
+      .card3 {
+        padding: 1%;
+      }
+
+      .section2 {
+        background: none;
+      }
+
+      .section4 iframe {
+        width: 48%;
+        height: 85px;
+        border-radius: 7px;
+      }
+
+      .manyMore {
+        font-size: 39px;
+      }
+
+      .thumbnail img {
+        width: 48%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="firstIntro">
+    <div>
+      <p class="tittle">Welcome To<br><span class="motion">Aman</span>'s Portfolio<br>
+        <!-- <span id="element"></span> -->
+      </p>
+    </div>
+    <div class="logo">
+      <img class="object-cover object-center rounded" src="https://i.postimg.cc/4xXKxNwZ/mslogo-white-2x.png">
+    </div>
+  </div>
+
+  <div class="section2">
+    <h1>Short Form Videos</Video></h1>
+    <p>Elevate your content with precision and creativity – our skilled video editors are here to craft dynamic reels
+      and shorts that leave a lasting impact.</p>
+
+    <div class="imgBox">
+      <div class="card">
+        <video src="shorts3.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+      </div>
+
+      <div class="card">
+        <video src="shorts2.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+      </div>
+
+      <div class="card">
+        <video src="shorts1.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+      </div>
+    </div>
+  </div>
+
+  <div class="section3">
+    <h1>Talking Head</h1>
+    <p>Bring your brand to the forefront with our talking head video expertise, where articulate storytelling meets
+      engaging visuals for a powerful and authentic connection. </p>
+    <div class="imgBox3">
+      <div class="card3">
+        <video src="before_talking.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>Before</p>
+      </div>
+
+      <div class="card3">
+        <video src="after_talking.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>After</p>
+      </div>
+    </div>
+
+    <h1>Faceless</h1>
+    <p>Unleash the power of faceless storytelling through our expert video production – crafting visually captivating
+      narratives that speak volumes without revealing a face.</p>
+    <div class="imgBox3">
+      <div class="card3">
+        <video src="before_faceless.mov" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>Before</p>
+      </div>
+
+      <div class="card3">
+        <video src="after_faceless.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>After</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="gallery">
+    <div class="bg-black py-6 sm:py-8 lg:py-12">
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+          <div class="flex items-center gap-12">
+            <h2 class="text-2xl font-bold text-white lg:text-5xl">We Edit</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+          <!-- image - start -->
+          <a class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+            <img src="https://i.postimg.cc/d35tWkd0/pexels-ron-lach-7848992.jpg" loading="lazy" alt="Photo by Minh Pham"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+            </div>
+
+            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Gaming Videos</span>
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+            <img src="https://i.postimg.cc/nV0sxz5G/pexels-fox-1615824.jpg" loading="lazy" alt="Photo by Magicle"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+            </div>
+
+            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Vlogs</span>
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a
+            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+            <img src="https://i.postimg.cc/k4ky2GDB/pexels-justin-brinkhoff-5860950.jpg" loading="lazy"
+              alt="Photo by Martin Sanchez"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-80">
+            </div>
+
+            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Commercial Videos</span>
+          </a>
+          <!-- image - end -->
+
+          <!-- image - start -->
+          <a class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+            <img src="https://i.postimg.cc/c4fQfYLM/pexels-cottonbro-studio-6883805.jpg" loading="lazy"
+              alt="Photo by Lorenzo Herrera"
+              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+
+            <div
+              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+            </div>
+
+            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Podcasts</span>
+          </a>
+          <!-- image - end -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <div class="bg-black py-6 sm:py-8 lg:py-12">
+      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+        <!-- text - start -->
+        <div class="mb-8 md:mb-12">
+          <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">Our Happy Clients</h2>
+
+          <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">We have worked with various clients</p>
+        </div>
+        <!-- text - end -->
+
+        <div class="flex justify-center grid grid-cols-2 gap-2 md:grid-cols-4 lg:gap-8">
+
+          <!-- stat - start -->
+          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">5+</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base">Years Of Experience</div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">10+</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base">Int. Clients</div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">100+</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base">Videos Edited</div>
+          </div>
+
+          <!-- stat - start -->
+          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">100%</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base">Client Satisfaction</div>
+          </div>
+          <!-- stat - end -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-black py-6 sm:py-8 lg:py-12">
+      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+        <h2 class="mb-8 text-center text-2xl font-bold text-white md:mb-12 lg:text-3xl">What others say about us</h2>
+
+        <div class="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
+          <!-- quote - start -->
+          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
+            <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life
+              effortlessly – Thank you!”</div>
+
+            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
+                <img src="https://i.postimg.cc/ZnBChZLC/channels4-profile.jpg" loading="lazy" alt="Photo by Radu Florin"
+                  class="h-full w-full object-cover object-center" />
+              </div>
+
+              <div>
+                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">William Stewart
+                </div>
+                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">5k+ Followers</p>
+              </div>
+            </div>
+          </div>
+          <!-- quote - end -->
+
+          <!-- quote - start -->
+          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
+            <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded
+              expectations with attention to detail. Highly recommended!”</div>
+
+            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
+                <img src="https://i.postimg.cc/CK7ZGc1L/channels4-profile-1.jpg" loading="lazy"
+                  alt="Photo by christian ferrer" class="h-full w-full object-cover object-center" />
+              </div>
+
+              <div>
+                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Archit Mehrotra
+                </div>
+                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">300k+ Followers</p>
+              </div>
+            </div>
+          </div>
+          <!-- quote - end -->
+
+          <!-- quote - start -->
+          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
+            <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my project
+              into a visual masterpiece.”</div>
+
+            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
+              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
+                <img src="https://i.postimg.cc/jj3gj0fz/channels4-profile-2.jpg" loading="lazy"
+                  alt="Photo by Ayo Ogunseinde" class="h-full w-full object-cover object-center" />
+              </div>
+
+              <div>
+                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Jirie Caribbean
+                </div>
+                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">50k+ Subscribers</p>
+              </div>
+            </div>
+          </div>
+          <!-- quote - end -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="bg-black pt-4 sm:pt-10 lg:pt-12">
+      <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <div class="flex flex-col items-center border-t border-slate-800 pt-6">
+          <img class="logoFooter" src="https://i.postimg.cc/bvM43rBj/msfull-white-2x.png" alt="MotionScope">
+
+          <!-- social - start -->
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/motionscope_official" target="_blank"
+              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+              <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+
+            <a href="https://twitter.com/motionscope03" target="_blank"
+              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+              <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+              </svg>
+            </a>
+
+            <a href="https://www.linkedin.com/company/motionscope-agency" target="_blank"
+              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+              <svg class="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/people/MotionScope-Agency/61553372522753/" target="_blank"
+              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- social - end -->
+        </div>
+
+        <div class="py-8 text-center text-sm text-gray-400">© 2023 - Present MotionScope. All rights reserved.</div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Edit dreams into reality.'],
+      typeSpeed: 40,
+    });
+
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    // Function to handle video playback based on visibility
+    function handleVideoVisibility() {
+      var videos = document.querySelectorAll('video');
+
+      videos.forEach(function (video) {
+        if (isElementInViewport(video.parentElement)) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }
+
+    // Use Intersection Observer to detect when videos are in the viewport
+    var observer = new IntersectionObserver(handleVideoVisibility, { threshold: 0.9 });
+
+    // Observe each video element
+    document.querySelectorAll('video').forEach(function (video) {
+      observer.observe(video);
+    });
+
+    // Listen for scroll events to check video visibility
+    window.addEventListener('scroll', handleVideoVisibility);
+
+    // Initial check for video visibility
+    handleVideoVisibility();
+  </script>
+
+</body>
+
+</html>
