@@ -20,21 +20,29 @@
       height: 100vh;
       background: linear-gradient(rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/sxC1WVPV/Whats-App-Image-2023-11-24-at-10-39-30-PM.jpg') center center/cover no-repeat;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      /* margin-top: 40px; */
+      /* justify-content: center; */
       align-items: center;
-      justify-content: space-around;
       padding: 0px 70px;
     }
 
     .tittle {
       color: white;
-      font-size: 1.5rem;
+      font-size: 121px;
+      padding-top: 55px;
+      font-weight: bold;
     }
 
-    .motion {
-      font-size: 6em;
-      line-height: 1;
-      font-weight: 600;
+    .box {
+      display: flex;
+      justify-content: center;
+      color: white;
+      width: 1200px;
+      height: 60vh;
+      background: linear-gradient(to right, rgb(0, 0, 0, 0.7), rgb(128, 128, 128, 0.7));
+      padding: 20px;
+      border-radius: 7px;
     }
 
     #element {
@@ -252,12 +260,25 @@
 <body>
   <div class="firstIntro">
     <div>
-      <p class="tittle">Welcome To<br><span class="motion">Aman</span>'s Portfolio<br>
+      <p class="tittle">Cuts by Aman</span><br>
         <!-- <span id="element"></span> -->
       </p>
     </div>
-    <div class="logo">
+    <!-- <div class="logo">
       <img class="object-cover object-center rounded" src="https://i.postimg.cc/4xXKxNwZ/mslogo-white-2x.png">
+    </div> -->
+
+    <div class="box">
+
+      <img src="profilepic.jpg" style="height: 50vh;">
+
+      <div class="content" style="display: flex; flex-direction: column; text-align: center; padding-left: 20px;">
+        <h1 style="font-size: 24px; font-weight: bold;">About Me</h1>
+        <div class="about" style="margin: auto 0;">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi perferendis rem sed doloremque! Repudiandae
+          ab quasi atque voluptate minus. Soluta?
+        </div>
+      </div>
     </div>
   </div>
 
@@ -268,23 +289,27 @@
 
     <div class="imgBox">
       <div class="card">
-        <video src="shorts3.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <video src="shorts1.mp4" type="video/mp4" id="video" loop muted controls></video>
       </div>
 
       <div class="card">
-        <video src="shorts2.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <video src="shorts1.mp4" type="video/mp4" id="video" loop muted controls></video>
       </div>
 
       <div class="card">
-        <video src="shorts1.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <video src="shorts1.mp4" type="video/mp4" id="video" loop muted controls></video>
+      </div>
+      <div class="card">
+        <video src="shorts1.mp4" type="video/mp4" id="video" loop muted controls></video>
+      </div>
+      <div class="card">
+        <video src="shorts1.mp4" type="video/mp4" id="video" loop muted controls></video>
       </div>
     </div>
   </div>
 
   <div class="section3">
     <h1>Talking Head</h1>
-    <p>Bring your brand to the forefront with our talking head video expertise, where articulate storytelling meets
-      engaging visuals for a powerful and authentic connection. </p>
     <div class="imgBox3">
       <div class="card3">
         <video src="before_talking.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
@@ -295,11 +320,13 @@
         <video src="after_talking.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
         <p>After</p>
       </div>
+      <div class="card3">
+        <video src="after_talking.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>After</p>
+      </div>
     </div>
 
     <h1>Faceless</h1>
-    <p>Unleash the power of faceless storytelling through our expert video production – crafting visually captivating
-      narratives that speak volumes without revealing a face.</p>
     <div class="imgBox3">
       <div class="card3">
         <video src="before_faceless.mov" type="video/mp4" id="video" autoplay loop muted controls></video>
@@ -310,86 +337,22 @@
         <video src="after_faceless.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
         <p>After</p>
       </div>
-    </div>
-
-  </div>
-
-  <div class="gallery">
-    <div class="bg-black py-6 sm:py-8 lg:py-12">
-      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
-          <div class="flex items-center gap-12">
-            <h2 class="text-2xl font-bold text-white lg:text-5xl">We Edit</h2>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-          <!-- image - start -->
-          <a class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-            <img src="https://i.postimg.cc/d35tWkd0/pexels-ron-lach-7848992.jpg" loading="lazy" alt="Photo by Minh Pham"
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-            <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-            </div>
-
-            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Gaming Videos</span>
-          </a>
-          <!-- image - end -->
-
-          <!-- image - start -->
-          <a
-            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-            <img src="https://i.postimg.cc/nV0sxz5G/pexels-fox-1615824.jpg" loading="lazy" alt="Photo by Magicle"
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-            <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-            </div>
-
-            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Vlogs</span>
-          </a>
-          <!-- image - end -->
-
-          <!-- image - start -->
-          <a
-            class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
-            <img src="https://i.postimg.cc/k4ky2GDB/pexels-justin-brinkhoff-5860950.jpg" loading="lazy"
-              alt="Photo by Martin Sanchez"
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-            <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-80">
-            </div>
-
-            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Commercial Videos</span>
-          </a>
-          <!-- image - end -->
-
-          <!-- image - start -->
-          <a class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-            <img src="https://i.postimg.cc/c4fQfYLM/pexels-cottonbro-studio-6883805.jpg" loading="lazy"
-              alt="Photo by Lorenzo Herrera"
-              class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-
-            <div
-              class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-            </div>
-
-            <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">Podcasts</span>
-          </a>
-          <!-- image - end -->
-        </div>
+      <div class="card3">
+        <video src="after_faceless.MP4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <p>After</p>
       </div>
     </div>
+
   </div>
+
+
 
   <div class="testimonials">
     <div class="bg-black py-6 sm:py-8 lg:py-12">
       <div class="mx-auto max-w-screen-xl px-4 md:px-8">
         <!-- text - start -->
         <div class="mb-8 md:mb-12">
-          <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">Our Happy Clients</h2>
+          <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">My Happy Clients</h2>
 
           <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">We have worked with various clients</p>
         </div>
@@ -399,12 +362,12 @@
 
           <!-- stat - start -->
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">5+</div>
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">2+</div>
             <div class="text-sm font-semibold text-gray-100 sm:text-base">Years Of Experience</div>
           </div>
 
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">10+</div>
+            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">20+</div>
             <div class="text-sm font-semibold text-gray-100 sm:text-base">Int. Clients</div>
           </div>
 
@@ -428,11 +391,9 @@
       <div class="mx-auto max-w-screen-xl px-4 md:px-8">
         <h2 class="mb-8 text-center text-2xl font-bold text-white md:mb-12 lg:text-3xl">What others say about us</h2>
 
-        <div class="grid gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
+        <div class="grid gap-y-0 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life
-              effortlessly – Thank you!”</div>
 
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
@@ -446,14 +407,18 @@
                 <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">5k+ Followers</p>
               </div>
             </div>
+
+            <div class="text" style="color: white;"><video src="shorts1.mp4" style="border-radius: 7px;"></video></div>
+
+            <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life
+              effortlessly – Thank you!”</div>
+
+
           </div>
           <!-- quote - end -->
 
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded
-              expectations with attention to detail. Highly recommended!”</div>
-
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
                 <img src="https://i.postimg.cc/CK7ZGc1L/channels4-profile-1.jpg" loading="lazy"
@@ -466,14 +431,18 @@
                 <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">300k+ Followers</p>
               </div>
             </div>
+
+            <div class="text" style="color: white;"><video src="shorts1.mp4" style="border-radius: 7px;"></video></div>
+
+            <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded
+              expectations with attention to detail. Highly recommended!”</div>
+
+
           </div>
           <!-- quote - end -->
 
           <!-- quote - start -->
           <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my project
-              into a visual masterpiece.”</div>
-
             <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
               <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
                 <img src="https://i.postimg.cc/jj3gj0fz/channels4-profile-2.jpg" loading="lazy"
@@ -486,6 +455,11 @@
                 <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">50k+ Subscribers</p>
               </div>
             </div>
+
+            <div class="text" style="color: white;"><video src="shorts1.mp4" style="border-radius: 7px;"></video></div>
+
+            <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my project
+              into a visual masterpiece.”</div>
           </div>
           <!-- quote - end -->
         </div>
