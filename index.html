@@ -5,9 +5,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Cuts by Aman</title>
   <link rel="icon" href="https://i.postimg.cc/s2kGyPNH/mslogo-white-2x.png" sizes="128x128" type="image/png">
   <style>
@@ -16,42 +17,17 @@
       background-color: black;
     }
 
-    .firstIntro {
+    .homePage {
       height: 100vh;
-      background: linear-gradient(rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/sxC1WVPV/Whats-App-Image-2023-11-24-at-10-39-30-PM.jpg') center center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0px 70px;
-    }
-
-    .tittle {
-      color: white;
-      font-size: 121px;
-      padding-top: 55px;
-      font-weight: bold;
-    }
-
-    .box {
-      display: flex;
-      justify-content: center;
-      color: white;
-      width: 1200px;
-      height: 60vh;
-      background: linear-gradient(to right, rgb(0, 0, 0, 0.7), rgb(128, 128, 128, 0.7));
-      padding: 20px;
-      border-radius: 7px;
-    }
-
-    #element {
-      font-weight: 200;
+      background: radial-gradient(at bottom, rgb(8, 8, 8), rgba(0, 0, 0, 0.9)), url('https://i.postimg.cc/L4NGmsLg/IMG-20240307-160700.jpg') center center/cover no-repeat;
+      text-align: center;
+      padding-top: 50px;
     }
 
     .section2 {
       background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/yY5H2Svv/IMG-0878.jpg') fixed center/cover no-repeat;
       color: white;
       text-align: center;
-      margin-top: 320px;
     }
 
     .section2 h1 {
@@ -66,32 +42,29 @@
 
     .card {
       display: flex;
+      margin: 20px;
     }
 
     .card video {
       width: 325px;
-      margin-left: 30px;
-      padding-top: 30px;
       border-radius: 15px;
-
     }
 
     .section3 {
-      padding: 5% 5%;
       background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/HxQDyZgN/IMG-0879.jpg') fixed center/cover no-repeat;
       color: white;
       text-align: center;
     }
 
     .section3 h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       font-weight: 600;
     }
 
     .meeting {
-      padding: 5% 5% 0% 5%;
       color: white;
       display: flex;
+      align-items: center;
       flex-direction: row;
       justify-content: space-around;
     }
@@ -121,43 +94,14 @@
       padding: 14px;
     }
 
-    /* .card3 video {
-      border-radius: 15px;
-    } */
-
     .card3 p {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
+      padding-top: 10px;
     }
 
-    .section4 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 5% 10%;
-    }
 
-    .homePage{
-      padding-bottom: 150px;
-    }
 
-    /* .thumbnail {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    } */
-
-    /* .section4 iframe {
-      margin: 1%;
-      border-radius: 15px;
-    } */
-
-    /* .manyMore {
-      font-size: 3em;
-      font-weight: 600;
-      color: white;
-
-    } */
 
     iframe {
       width: 27vw;
@@ -166,150 +110,101 @@
       border-radius: 13px;
     }
 
-    /* .logoFooter {
-      width: 210px;
-      height: 120px;
-    } */
-
-    /* .thumbnail img {
-      width: 32%;
-      margin: 1%;
-      border-radius: 15px;
-    }
-
-    .thumbnail {
-      color: white;
-    } */
-
 
 
     @media (max-width: 768px) {
-      .firstIntro {
-        flex-direction: column-reverse;
-        justify-content: center;
-      }
 
       .meetingText {
-        font-size: 34px;
+        font-size: 30px;
       }
 
       .meetingBtn {
         height: 100px;
         width: 135px;
+        padding: 50px;
       }
 
-      .motion {
-        font-size: 2em;
-      }
-
-      #element {
-        font-size: 18px;
-      }
-
-      .imgBox {
+      .imgBox,
+      .imgBox3 {
         flex-direction: column;
-      }
-
-      .section2 p,
-      .thumbnail p {
-        font-size: 12px;
-      }
-
-      .section2 h1 {
-        font-size: 39px;
-        line-height: 1.1;
-        margin-bottom: 5%;
-      }
-
-      .section3 h1,
-      #meetingText {
-        font-size: 20px;
-      }
-
-      .card3 video {
-        border-radius: 7px;
-      }
-
-      .card3 p {
-        font-size: 14px;
-        font-weight: 600;
+        flex-direction: column;
+        align-items: center;
       }
 
       .section3 p {
-        font-size: 12px;
-        margin-bottom: 5%;
+        font-size: 18px;
+        padding-top: 10px;
       }
 
+      .section3 h1 {
+        font-size: 2.5rem;
+      }
+
+      .section2,
       .section3 {
-        padding: 3%;
         background: none;
-      }
-
-      .card3 {
-        padding: 1%;
       }
 
       .section2 {
-        background: none;
+        padding-top: 850px;
       }
 
-      .section4 iframe {
-        width: 48%;
-        height: 85px;
-        border-radius: 7px;
+      .card3 iframe {
+        aspect-ratio: 16/9;
+        width: 300px;
       }
 
-      .manyMore {
-        font-size: 39px;
+      .card video {
+        aspect-ratio: 9/16;
+        width: 300px;
       }
 
-      .thumbnail img {
-        width: 48%;
+      .footer svg,
+      .footer img {
+        width: 20px;
+        height: 20px;
       }
+
     }
   </style>
 </head>
 
 <body>
-  <div class="firstIntro">
-    <div>
-      <p class="tittle">Cuts by Aman</span><br>
-      </p>
-    </div>
 
-    <div class="homePage">
-      <section class="text-gray-100 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <p style="margin: 0; font-size: 35px; line-height: 0;">Yup that's me</p>
-            <span style="font-weight: bolder; font-size: 55px; padding-top: 5px;">Aman</span>
-            <p class="mb-8 leading-relaxed text-lg">Crafting video's for the past two years for various creators across
-              the
-              globe.<br><br>Recently certified by <u>AEVY TV</u>, I have upgraded my skills to the next level. Be it
-              increasing CTR of
-              a short form video by adding a great hook or playing with retention graph in a longer format. I'm dedicated
-              to crafting captivating visual narratives and mastering visual story telling.<br><br>My passion lies in
-              weaving
-              stories that enhances viewer's experience across various social media platforms and I am driven by the
-              thrill of transforming good stories into an visual experience.<br><br>Interested in working? Give me a
-              nudge!
-            </p>
-            <div class="flex justify-center">
-              <button
-                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><a
-                  href="#testimonialHref">Testimonials</a></button>
-              <button
-                class="ml-4 inline-flex text-gray-900 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"><a
-                  href="#videosHref">Videos</a></button>
-            </div>
-          </div>
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img style="height: 600px; width: auto; border-radius: 13px;" alt="hero" src="dp.jpg">
+  <div class="homePage">
+    <h1 style="font-family:'Homemade Apple'; color: white; font-size: 50px;">Cuts by Aman</h1>
+    <section class="text-gray-100 body-font">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <p style="margin: 0; font-size: 35px; line-height: 0;">Yup that's me</p>
+          <span style="font-weight: bolder; font-size: 55px; padding-top: 5px;">Aman</span>
+          <p class="mb-8 leading-relaxed text-lg">Crafting video's for the past 2 years for various creators across
+            the
+            globe.<br><br>Recently certified by <a href="https://www.aevytv.com/" target="_blank"><u><b>AEVY TV</b></u></a>,
+            I've upgraded my skills to the next level. Be it
+            increasing CTR of
+            a short form video by adding a great hook or playing with retention graph in a longer format. I'm dedicated
+            to crafting captivating visual narratives and mastering visual story telling.<br><br>My passion lies in
+            weaving
+            stories that enhances viewer's experience across various social media platforms and I am driven by the
+            thrill of transforming good stories into an visual experience.<br><br>Interested in working? Give me a
+            nudge!
+          </p>
+          <div class="flex justify-center">
+            <button
+              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg rounded-full"><a
+                href="#testimonialHref" id="scroll-link">Testimonials</a></button>
+            <button
+              class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg rounded-full"><a
+                href="#videosHref" id="scroll-link">Videos</a></button>
           </div>
         </div>
-      </section>
-    </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <img class="rounded-full object-cover" style="aspect-ratio: 1/1;" alt="hero" src="https://i.postimg.cc/3NzdGd3B/dp.jpg">
+        </div>
+      </div>
+    </section>
   </div>
 
   <div class="section2" id="videosHref">
@@ -317,11 +212,11 @@
 
     <div class="imgBox">
       <div class="card">
-        <video src="shorts3.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <video src="shorts1.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
       </div>
 
       <div class="card">
-        <video src="shorts2.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
+        <video src="shorts1.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
       </div>
 
       <div class="card">
@@ -332,29 +227,28 @@
   </div>
 
   <div class="section3">
-
-    <div class="talkingHeadSec" style="padding-top: 250px;">
+    <div class="talkingHeadSec" style="padding-top: 100px;">
       <h1>Talking Head</h1>
       <div class="imgBox3">
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/g6oy-192XzM?si=rI5fH2aKt9wf529C"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/g6oy-192XzM?si=rI5fH2aKt9wf529C" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-          <p>Documentry Style</p>
+          <p>Documentary Style</p>
         </div>
 
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/h_fypxpEoEM?si=vqF2ZATr3-oG-Y8N"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/h_fypxpEoEM?si=vqF2ZATr3-oG-Y8N" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
           <p>Ali Abdal Style</p>
         </div>
 
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/YNUnP4PoFfI?si=ltfU-QZUbTmOts_4"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/YNUnP4PoFfI?si=ltfU-QZUbTmOts_4" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
           <p>My Style</p>
@@ -363,27 +257,27 @@
       </div>
     </div>
 
-    <div class="facelessSec" style="padding-top: 300px; padding-bottom: 250px;">
+    <div class="facelessSec" style="padding-top: 100px; padding-bottom: 100px;">
       <h1>Faceless</h1>
       <div class="imgBox3">
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/Eml8DORc86Q?si=ND1Flxb_2BfP8Hcc"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/Eml8DORc86Q?si=ND1Flxb_2BfP8Hcc" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
-          <p>Motio Graphics Style</p>
+          <p>Motion Graphics Style</p>
         </div>
 
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/8FfKI0ewkTc?si=8G9aRtA6xhk-Yxv1"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/8FfKI0ewkTc?si=8G9aRtA6xhk-Yxv1" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
           <p>Stock Based Style</p>
         </div>
         <div class="card3">
-          <iframe src="https://www.youtube.com/embed/fPrTS-BItHk?si=U5BQEBE09aCY5_VV"
-            title="YouTube video player" frameborder="0"
+          <iframe src="https://www.youtube.com/embed/fPrTS-BItHk?si=U5BQEBE09aCY5_VV" title="YouTube video player"
+            frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
           <p>My Style</p>
@@ -392,8 +286,6 @@
     </div>
 
   </div>
-
-
 
   <div class="testimonials" id="testimonialHref">
     <div class="bg-black py-6 sm:py-8 lg:py-12">
@@ -411,23 +303,24 @@
           <!-- stat - start -->
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
             <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">2+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base">Years Of Experience</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Years Of Experience</div>
           </div>
 
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
             <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">25+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base">Int. Clients</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">International
+              Clients</div>
           </div>
 
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
             <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">500+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base">Videos Edited</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Videos Edited</div>
           </div>
 
           <!-- stat - start -->
           <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
             <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">100%</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base">Client Satisfaction</div>
+            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Client Satisfaction</div>
           </div>
           <!-- stat - end -->
 
@@ -575,7 +468,6 @@
   </div>
 
 
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script>
     var typed = new Typed('#element', {
       strings: ['Edit dreams into reality.'],
@@ -619,6 +511,58 @@
     // Initial check for video visibility
     handleVideoVisibility();
   </script>
+
+  <script>
+    // Function to handle scrolling animation
+    function scrollToTarget() {
+      const targetSection = document.querySelector("#testimonialHref");
+      const scrollLink = document.querySelector("#scroll-link");
+
+      // Prevent default anchor behavior
+      scrollLink.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Calculate the offset of the target section
+        const offsetTop = targetSection.offsetTop;
+
+        // Animate scroll to the target section
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    // Call the function when the DOM is loaded
+    document.addEventListener("DOMContentLoaded", scrollToTarget);
+  </script>
+
+  <script>
+    // Function to handle scrolling animation
+    function scrollToTarget() {
+      const targetSection = document.querySelector("videosHref");
+      const scrollLink = document.querySelector("#scroll-link");
+
+      // Prevent default anchor behavior
+      scrollLink.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Calculate the offset of the target section
+        const offsetTop = targetSection.offsetTop;
+
+        // Animate scroll to the target section
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth"
+        });
+      });
+    }
+
+    // Call the function when the DOM is loaded
+    document.addEventListener("DOMContentLoaded", scrollToTarget);
+  </script>
+
+
 
 </body>
 
