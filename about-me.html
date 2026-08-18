@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Cuts by Aman</title>
+  <meta name="description"
+    content="Where I come from, what I work on, and the kit I reach for. Video editor and motion designer, certified by AEVY TV.">
+
+  <link rel="icon" href="assets/media/aman-portrait.jpg">
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrumentserif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+
+<body>
+
+  <!-- ===================== Page head ===================== -->
+  <header class="page-head">
+    <div class="page-head__card">
+
+      <div class="hero__fx" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__beams">
+          <div class="hero__beam"></div>
+          <div class="hero__beam"></div>
+          <div class="hero__beam"></div>
+        </div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="hero__top">
+        <a class="btn btn--ghost" href="index.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 12H5M11 18l-6-6 6-6" />
+          </svg>
+          Back to Main Page
+        </a>
+        <nav class="hero__nav" aria-label="Primary">
+          <div id="hero-socials"></div>
+          <a class="btn btn--ghost" href="index.html#projects">Projects</a>
+          <a class="btn btn--ghost" data-href="brand.calendly" href="#" target="_blank" rel="noopener">Book a Call</a>
+        </nav>
+      </div>
+
+      <div class="page-head__body">
+        <h1 class="h-display" data-text="about.heading">About Me</h1>
+        <p class="lede" data-text="about.intro"></p>
+
+        <div class="profile">
+          <img class="profile__portrait" data-src="hero.portrait" src="" alt="Portrait of Aman">
+          <div>
+            <h2 class="h-group" data-text="brand.name">Cuts by Aman</h2>
+            <p class="profile__role" data-text="brand.role"></p>
+
+            <div class="profile__bio" id="about-bio"></div>
+
+            <div class="profile__actions">
+              <a class="btn btn--primary" data-href="brand.calendly" href="#" target="_blank" rel="noopener">
+                Book a Call
+                <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="index.html#projects">See My Work</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===================== Skills ===================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom: 24px;">
+        <h2 class="h-group">Skills</h2>
+      </div>
+      <div class="reveal" id="about-skills"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Tools ===================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom: 24px;">
+        <h2 class="h-group">Tools</h2>
+      </div>
+      <div class="reveal" id="about-tools"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Experience (hidden until config has entries) ==== -->
+  <section class="section" style="padding-top: 0;" id="experience-section">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom: 56px;">
+        <h2 class="h-group">Experience</h2>
+      </div>
+      <div id="about-experience"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Education (hidden until config has entries) ===== -->
+  <section class="section" style="padding-top: 0;" id="education-section">
+    <div class="wrap">
+      <div class="reveal" style="margin-bottom: 56px;">
+        <h2 class="h-group">Education</h2>
+      </div>
+      <div id="about-education"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="cta__card reveal">
+        <div class="cta__text">
+          <h2 class="h-section">Up for a <span class="serif">chat?</span></h2>
+          <p class="lede" style="margin-top: 16px;">
+            Got a project, or just want to see if we click? Grab a slot and tell me what you're making.
+          </p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--primary" data-href="brand.calendly" href="#" target="_blank" rel="noopener">
+            Click to Connect
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <div id="footer-socials"></div>
+        <p class="footer__copy" id="footer-copy"></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+
+</html>

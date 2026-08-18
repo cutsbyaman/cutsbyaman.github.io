@@ -2,569 +2,254 @@
 <html lang="en">
 
 <head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuts by Aman</title>
-  <link rel="icon" href="https://i.postimg.cc/s2kGyPNH/mslogo-white-2x.png" sizes="128x128" type="image/png">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: black;
-    }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuts by Aman - Video Editor &amp; Motion Designer</title>
+  <meta name="description"
+    content="Hey, I'm Aman. I edit short-form and long-form video for creators and brands across the globe - hooks that lift CTR, retention that holds.">
 
-    .homePage {
-      height: 100vh;
-      background: radial-gradient(at bottom, rgb(8, 8, 8), rgba(0, 0, 0, 0.9)), url('https://i.postimg.cc/L4NGmsLg/IMG-20240307-160700.jpg') center center/cover no-repeat;
-      text-align: center;
-      padding: 50px 5% 0px 5%;
-    }
+  <meta property="og:title" content="Cuts by Aman - Video Editor &amp; Motion Designer">
+  <meta property="og:description"
+    content="Short form built to stop the scroll, long form built to keep people watching.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/media/aman-portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    .section2 {
-      background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/yY5H2Svv/IMG-0878.jpg') fixed center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding-top: 120px;
-    }
+  <link rel="icon" href="assets/media/aman-portrait.jpg">
+  <link rel="preload" href="assets/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrumentserif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="stylesheet" href="assets/css/site.css">
 
-    .section2 h1 {
-      font-size: 3em;
-      font-weight: 600;
-    }
-
-    .imgBox {
-      display: flex;
-      justify-content: center;
-    }
-
-    .card {
-      display: flex;
-      margin: 20px;
-    }
-
-    .card video {
-      width: 325px;
-      border-radius: 15px;
-    }
-
-    .section3 {
-      background: linear-gradient(#000100, rgba(21, 26, 31, 0.5), #000100), url('https://i.postimg.cc/HxQDyZgN/IMG-0879.jpg') fixed center/cover no-repeat;
-      color: white;
-      text-align: center;
-    }
-
-    .section3 h1 {
-      font-size: 3.5em;
-      font-weight: 600;
-    }
-
-    .meeting {
-      color: white;
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-
-    .meetingText {
-      font-size: 3em;
-      font-weight: 600;
-    }
-
-    .meetingBtn {
-      background-color: #666dfa;
-      border-radius: 15px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 150px;
-      height: 72px;
-    }
-
-    .imgBox3 {
-      display: flex;
-      justify-content: center;
-    }
-
-    .card3 {
-      padding: 14px;
-    }
-
-    .card3 p {
-      font-size: 20px;
-      font-weight: 600;
-      padding-top: 10px;
-    }
-
-
-
-
-    iframe {
-      width: 27vw;
-      height: auto;
-      aspect-ratio: 16/9;
-      border-radius: 13px;
-    }
-
-
-
-    @media (max-width: 768px) {
-
-      .meetingText {
-        font-size: 30px;
-      }
-
-      .meetingBtn {
-        height: 100px;
-        width: 135px;
-        padding: 50px;
-      }
-
-      .imgBox,
-      .imgBox3 {
-        flex-direction: column;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .section3 p {
-        font-size: 18px;
-        padding-top: 10px;
-      }
-
-      .section3 h1 {
-        font-size: 2.5rem;
-      }
-
-      .section2,
-      .section3 {
-        background: none;
-      }
-
-      .section2 {
-        padding-top: 780px;
-      }
-
-      .card3 iframe {
-        aspect-ratio: 16/9;
-        width: 300px;
-      }
-
-      .card video {
-        aspect-ratio: 9/16;
-        width: 300px;
-      }
-
-      .footer svg,
-      .footer img {
-        width: 20px;
-        height: 20px;
-      }
-
-    }
-  </style>
+  <script src="config.js"></script>
+  <script>
+    // Runs before the body paints so the title card never flashes in or out.
+    (function () {
+      var doc = document.documentElement;
+      var cfg = (window.SITE_CONFIG || {}).intro || {};
+      var skip = cfg.enabled === false;
+      try {
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) skip = true;
+        if (cfg.oncePerSession) {
+          if (sessionStorage.getItem("introSeen")) skip = true;
+          else sessionStorage.setItem("introSeen", "1");
+        }
+      } catch (e) { /* private mode, carry on */ }
+      doc.classList.add(skip ? "no-intro" : "has-intro");
+    })();
+  </script>
 </head>
 
 <body>
 
-  <div class="homePage">
-    <h1 style="font-family:'Homemade Apple'; color: white; font-size: 50px;">Cuts by Aman</h1>
-    <section class="text-gray-100 body-font">
-      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div
-          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-          <p style="margin: 0; font-size: 35px; line-height: 0;">Yup that's me</p>
-          <span style="font-weight: bolder; font-size: 55px; padding-top: 5px;">Aman</span>
-          <p class="mb-8 leading-relaxed text-lg">Crafting video's for the past 2 years for various creators across
-            the
-            globe.<br><br>Recently certified by <a href="https://www.aevytv.com/" target="_blank"><u><b>AEVY TV</b></u></a>,
-            I've upgraded my skills to the next level. Be it
-            increasing CTR of
-            a short form video by adding a great hook or playing with retention graph in a longer format. I'm dedicated
-            to crafting captivating visual narratives and mastering visual story telling.<br><br>My passion lies in
-            weaving
-            stories that enhances viewer's experience across various social media platforms and I am driven by the
-            thrill of transforming good stories into an visual experience.<br><br>Interested in working? Give me a
-            nudge!
+  <!-- ===================== Opening animation ===================== -->
+  <div class="intro" id="intro" role="presentation">
+    <div class="intro__row">
+      <span class="intro__text">
+        <span class="intro__word" style="--i:0">Hey,</span>
+        <span class="intro__word" style="--i:1">This</span>
+        <span class="intro__word" style="--i:2">is</span>
+      </span>
+      <!-- One path per pen stroke, centreline-traced from the signature
+           artwork. SVG restarts a dash pattern on every subpath, so a single
+           multi-part path would draw its letters out of order. Each stroke
+           instead carries its own delay and duration, sized to its length, so
+           the whole hand runs back to back. -->
+      <svg class="intro__sig" viewBox="0 0 600 254" fill="none" aria-hidden="true">
+        <g stroke-linecap="round" stroke-linejoin="round">
+          <!-- flourish loop, up to the apex -->
+          <path class="intro__stroke" pathLength="1" style="--delay:0.70s;--dur:1.02s"
+            d="M310.2 162.7C310.4 161.5 304.3 169.5 311.5 155.7C318.8 141.9 346.4 94.0 353.8 80.0C361.2 65.9 356.9 72.3 355.9 71.2C355.0 70.2 361.9 61.4 348.1 73.4C334.3 85.5 287.1 131.2 273.2 143.5C259.4 155.8 266.1 147.7 265.0 147.0C263.8 146.3 264.0 144.5 266.3 139.2C268.5 133.8 275.6 122.4 278.5 114.8C281.4 107.2 283.0 101.4 283.7 93.4C284.3 85.5 284.3 75.4 282.4 67.3C280.5 59.3 275.6 50.5 272.4 45.1C269.2 39.8 266.6 38.1 263.2 35.1C259.9 32.1 259.4 30.8 252.3 27.3C245.2 23.8 230.8 17.1 220.6 14.2C210.3 11.3 201.3 10.5 191.0 9.9C180.6 9.2 167.9 9.6 158.3 10.3C148.7 11.0 143.0 11.9 133.5 14.2C124.0 16.5 111.5 20.3 101.3 24.2C91.1 28.2 81.3 32.7 72.1 37.7C63.0 42.7 54.6 47.9 46.4 54.3C38.3 60.7 29.0 69.4 23.4 76.0C17.7 82.6 14.9 87.7 12.5 93.9C10.1 100.1 8.9 107.7 9.0 113.0C9.1 118.4 10.2 121.5 12.9 126.1C15.7 130.7 21.4 137.1 25.5 140.9C29.7 144.7 30.5 145.7 37.7 149.2C44.9 152.6 59.4 158.7 68.6 161.8C77.9 164.8 80.8 165.6 93.4 167.5C106.1 169.3 129.2 171.8 144.4 172.7C159.5 173.5 169.6 173.3 184.4 172.7C199.2 172.1 223.9 169.6 233.2 169.2C242.5 168.8 239.0 170.3 240.1 170.5" />
+          <!-- right leg of the A -->
+          <path class="intro__stroke" pathLength="1" style="--delay:1.72s;--dur:0.10s"
+            d="M306.3 164.0C303.0 172.6 290.9 202.2 286.3 215.8C281.6 229.3 279.8 240.4 278.5 245.4" />
+          <!-- left leg of the A -->
+          <path class="intro__stroke" pathLength="1" style="--delay:1.82s;--dur:0.09s"
+            d="M240.1 170.5C239.9 171.5 247.3 167.5 238.4 176.6C229.5 185.7 195.2 217.2 186.6 225.3" />
+          <path class="intro__stroke" pathLength="1" style="--delay:1.91s;--dur:0.03s"
+            d="M265.0 147.0C263.1 149.1 255.8 156.4 253.6 159.6C251.5 162.8 252.2 165.1 251.9 166.1" />
+          <!-- crossbar -->
+          <path class="intro__stroke" pathLength="1" style="--delay:1.93s;--dur:0.06s"
+            d="M306.3 164.0C298.0 164.5 265.3 167.1 256.3 167.5C247.2 167.8 252.6 166.4 251.9 166.1" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.00s;--dur:0.01s"
+            d="M240.1 170.5C242.1 169.8 249.9 166.9 251.9 166.1" />
+          <!-- into the m -->
+          <path class="intro__stroke" pathLength="1" style="--delay:2.01s;--dur:0.05s"
+            d="M310.2 162.7C314.9 162.7 331.1 162.3 338.1 163.1C345.1 163.9 350.1 166.7 352.5 167.5" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.06s;--dur:0.01s"
+            d="M345.9 187.9C347.0 186.2 351.4 179.6 352.5 177.9" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.07s;--dur:0.06s"
+            d="M378.1 180.5C378.6 178.1 380.5 169.4 380.7 166.1C381.0 162.9 380.5 161.6 379.4 160.9C378.4 160.3 377.6 159.8 374.2 162.2C370.8 164.7 362.6 173.1 359.0 175.7C355.4 178.3 353.5 177.5 352.5 177.9" />
+          <!-- m -->
+          <path class="intro__stroke" pathLength="1" style="--delay:2.13s;--dur:0.09s"
+            d="M378.1 180.5C379.3 180.2 382.1 180.7 385.1 178.8C388.1 176.8 393.4 170.6 396.4 168.8C399.5 166.9 402.6 165.1 403.4 167.5C404.2 169.8 401.1 179.7 401.2 183.1C401.4 186.5 402.4 187.0 404.3 187.9C406.1 188.8 407.9 189.5 412.1 188.3C416.3 187.2 426.6 182.2 429.5 180.9" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.22s;--dur:0.04s"
+            d="M454.3 179.6C451.0 181.2 438.3 187.9 434.3 189.2C430.3 190.5 431.2 188.9 430.4 187.5C429.6 186.1 429.6 182.0 429.5 180.9" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.26s;--dur:0.06s"
+            d="M454.3 179.6C455.2 177.0 459.1 166.7 459.5 163.5C460.0 160.4 458.2 161.4 456.9 160.9C455.7 160.5 454.5 160.1 452.1 160.9C449.8 161.7 446.8 162.4 443.0 165.7C439.2 169.0 431.8 178.4 429.5 180.9" />
+          <!-- a -->
+          <path class="intro__stroke" pathLength="1" style="--delay:2.32s;--dur:0.05s"
+            d="M454.3 179.6C454.7 180.7 455.1 184.6 456.5 186.2C457.9 187.7 460.0 188.5 462.6 188.8C465.1 189.1 467.7 189.3 471.7 187.9C475.7 186.5 482.7 181.9 486.5 180.5C490.4 179.1 493.4 179.8 494.8 179.6" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.37s;--dur:0.02s"
+            d="M503.9 164.0C502.5 166.6 496.7 177.0 495.2 179.6" />
+          <path class="intro__stroke" pathLength="1" style="--delay:2.39s;--dur:0.04s"
+            d="M495.2 180.1C496.7 179.7 500.3 180.4 503.9 177.9C507.6 175.4 513.7 167.6 517.0 165.3C520.3 163.0 522.4 164.2 523.5 164.0" />
+          <!-- the tail -->
+          <path class="intro__stroke" pathLength="1" style="--delay:2.43s;--dur:0.12s"
+            d="M591.0 154.8C589.0 156.6 584.5 161.4 579.2 165.3C574.0 169.2 565.2 175.0 559.7 178.3C554.1 181.7 550.6 183.5 545.7 185.3C540.9 187.1 534.0 188.7 530.5 189.2C526.9 189.7 526.1 189.2 524.4 188.3C522.7 187.5 520.2 188.1 520.0 184.0C519.9 179.9 522.9 167.3 523.5 164.0" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===================== Hero ===================== -->
+  <header class="hero">
+    <div class="hero__card">
+
+      <div class="hero__fx" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__beams">
+          <div class="hero__beam"></div>
+          <div class="hero__beam"></div>
+          <div class="hero__beam"></div>
+          <div class="hero__beam"></div>
+        </div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="hero__top hero-in" style="--i:0">
+        <div class="idcard">
+          <img class="idcard__img" data-src="hero.portrait" src="" alt="Aman">
+          <div>
+            <div class="idcard__name" data-text="brand.name">Cuts by Aman</div>
+            <div class="idcard__role" data-text="brand.role">Video Editor &amp; Motion Designer</div>
+          </div>
+        </div>
+
+        <nav class="hero__nav" aria-label="Primary">
+          <div id="hero-socials"></div>
+          <a class="btn btn--ghost" href="about-me.html">About Me</a>
+          <a class="btn btn--ghost hero__nav-extra" href="#testimonials">Testimonials</a>
+          <a class="btn btn--ghost" data-href="brand.calendly" href="#" target="_blank" rel="noopener">Book a Call</a>
+        </nav>
+      </div>
+
+      <div class="hero__body">
+        <div class="hero__copy">
+          <span class="hero__status hero-in" style="--i:0">
+            <span class="hero__dot" aria-hidden="true"></span>
+            <span data-text="hero.availability">Available for new projects</span>
+          </span>
+
+          <h1 class="h-display hero-in" style="--i:1" data-accent-of="hero.headline"
+            data-accent="hero.accent">
+            Turning Raw Footage Into Stories That <span class="serif">Hold Attention</span>
+          </h1>
+
+          <p class="lede hero__bio hero-in" style="--i:2" data-text="hero.intro"></p>
+
+          <div class="hero__actions hero-in" style="--i:3">
+            <a class="btn btn--primary" href="#projects">
+              See My Work
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" data-href="brand.calendly" href="#" target="_blank" rel="noopener">Let's Talk</a>
+          </div>
+
+          <!-- Proof, pulled from the same numbers as the stats row further down. -->
+          <div class="hero__proof hero-in" style="--i:4" id="hero-proof"></div>
+        </div>
+
+        <div class="hero__portrait-wrap hero-in-portrait">
+          <img class="hero__portrait" data-src="hero.portrait" src="" alt="Portrait of Aman" fetchpriority="high">
+          <span class="hero__badge" data-text="hero.badge"></span>
+        </div>
+      </div>
+
+      <a class="hero__scroll hero-in" style="--i:5" href="#projects">
+        <span>See the work</span>
+        <span class="hero__scroll-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M6 13l6 6 6-6" />
+          </svg>
+        </span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ===================== Tools ===================== -->
+  <section class="tools" aria-label="Tools I use">
+    <p class="tools__label">Tools I use on a daily basis.</p>
+    <div id="tools"></div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2 class="h-section" data-accent-of="projects.heading" data-accent="projects.accent">Projects</h2>
+        <p class="lede" data-text="projects.intro"></p>
+      </div>
+      <div id="projects-body"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Testimonials ===================== -->
+  <section class="section" id="testimonials">
+    <div class="wrap">
+      <div id="stats"></div>
+
+      <div class="section__head reveal" style="margin-top: clamp(56px, 8vw, 96px); margin-bottom: 0;">
+        <h2 class="h-section" id="testimonials-heading">
+          Look at what my <span class="serif">clients</span> have to say about working with me.
+        </h2>
+      </div>
+
+      <div id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="wrap">
+      <div class="cta__card reveal">
+        <div class="cta__text">
+          <h2 class="h-section">Up for a <span class="serif">chat?</span></h2>
+          <p class="lede" style="margin-top: 16px;">
+            Got a project, or just want to see if we click? Grab a slot and tell me what you're making.
           </p>
-          <div class="flex justify-center">
-            <button
-              class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg rounded-full"><a
-                href="#testimonialHref" id="scroll-link">Testimonials</a></button>
-            <button
-              class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg rounded-full"><a
-                href="#videosHref" id="scroll-link">Videos</a></button>
-          </div>
         </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img class="rounded-full object-cover" style="aspect-ratio: 1/1;" alt="hero" src="https://i.postimg.cc/3NzdGd3B/dp.jpg">
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="section2" id="videosHref">
-    <h1>Short Form Videos</Video></h1>
-
-    <div class="imgBox">
-      <div class="card">
-        <video src="shorts3.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
-      </div>
-
-      <div class="card">
-        <video src="shorts2.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
-      </div>
-
-      <div class="card">
-        <video src="shorts1.mp4" type="video/mp4" id="video" autoplay loop muted controls></video>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="section3">
-    <div class="talkingHeadSec" style="padding-top: 100px;">
-      <h1>Talking Head</h1>
-      <div class="imgBox3">
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/g6oy-192XzM?si=rI5fH2aKt9wf529C" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>Documentary Style</p>
-        </div>
-
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/h_fypxpEoEM?si=vqF2ZATr3-oG-Y8N" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>Ali Abdal Style</p>
-        </div>
-
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/YNUnP4PoFfI?si=ltfU-QZUbTmOts_4" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>My Style</p>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="facelessSec" style="padding-top: 100px; padding-bottom: 100px;">
-      <h1>Faceless</h1>
-      <div class="imgBox3">
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/Eml8DORc86Q?si=ND1Flxb_2BfP8Hcc" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>Motion Graphics Style</p>
-        </div>
-
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/8FfKI0ewkTc?si=8G9aRtA6xhk-Yxv1" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>Stock Based Style</p>
-        </div>
-        <div class="card3">
-          <iframe src="https://www.youtube.com/embed/fPrTS-BItHk?si=U5BQEBE09aCY5_VV" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <p>My Style</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary" data-href="brand.calendly" href="#" target="_blank" rel="noopener">
+            Click to Connect
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="about-me.html">About Me</a>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-
-  <div class="testimonials" id="testimonialHref">
-    <div class="bg-black py-6 sm:py-8 lg:py-12">
-      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-        <!-- text - start -->
-        <div class="mb-8 md:mb-12">
-          <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl">My Happy Clients</h2>
-
-          <p class="mx-auto max-w-screen-md text-center text-white md:text-lg">I have worked with various clients</p>
-        </div>
-        <!-- text - end -->
-
-        <div class="flex justify-center grid grid-cols-2 gap-2 md:grid-cols-4 lg:gap-8">
-
-          <!-- stat - start -->
-          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">2+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Years Of Experience</div>
-          </div>
-
-          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">25+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">International
-              Clients</div>
-          </div>
-
-          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">500+</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Videos Edited</div>
-          </div>
-
-          <!-- stat - start -->
-          <div class="flex flex-col items-center justify-center rounded-lg bg-gray-900 p-4 md:p-8">
-            <div class="text-xl font-bold text-white sm:text-2xl md:text-3xl">100%</div>
-            <div class="text-sm font-semibold text-gray-100 sm:text-base text-center">Client Satisfaction</div>
-          </div>
-          <!-- stat - end -->
-
-        </div>
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <div id="footer-socials"></div>
+        <p class="footer__copy" id="footer-copy"></p>
       </div>
     </div>
+  </footer>
 
-    <div class="bg-black py-6 sm:py-8 lg:py-12">
-      <div class="mx-auto max-w-screen-xl px-4 md:px-8">
-        <h2 class="mb-8 text-center text-2xl font-bold text-white md:mb-12 lg:text-3xl">Look at what my clients have to
-          say about working with me.</h2>
-
-        <div class="grid gap-y-0 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-3 lg:divide-x">
-          <!-- quote - start -->
-          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-
-            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/ZnBChZLC/channels4-profile.jpg" loading="lazy" alt="Photo by Radu Florin"
-                  class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">William Stewart
-                </div>
-                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">5k+ Followers</p>
-              </div>
-            </div>
-
-            <div class="text" style="color: white;"><video src="will.mp4" controls style="border-radius: 7px;"></video>
-            </div>
-
-            <!-- <div class="text-center text-gray-100">“Your editing skills are top-notch! You brought my vision to life
-              effortlessly – Thank you!”</div> -->
-
-
-          </div>
-          <!-- quote - end -->
-
-          <!-- quote - start -->
-          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/CK7ZGc1L/channels4-profile-1.jpg" loading="lazy"
-                  alt="Photo by christian ferrer" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Archit Mehrotra
-                </div>
-                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">300k+ Followers</p>
-              </div>
-            </div>
-
-            <div class="text" style="color: white;"><video src="finWala.mp4" controls="border-radius: 7px;"></video>
-            </div>
-
-            <!-- <div class="text-center text-gray-100">“Impressive professionalism and timely delivery. Exceeded
-              expectations with attention to detail. Highly recommended!”</div> -->
-
-
-          </div>
-          <!-- quote - end -->
-
-          <!-- quote - start -->
-          <div class="flex flex-col items-center gap-4 sm:px-4 md:gap-6 lg:px-8">
-            <div class="flex flex-col items-center gap-2 sm:flex-row md:gap-3">
-              <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-14 md:w-14">
-                <img src="https://i.postimg.cc/jj3gj0fz/channels4-profile-2.jpg" loading="lazy"
-                  alt="Photo by Ayo Ogunseinde" class="h-full w-full object-cover object-center" />
-              </div>
-
-              <div>
-                <div class="text-center text-sm font-bold text-indigo-500 sm:text-left md:text-base">Jirie Caribbean
-                </div>
-                <p class="text-center text-sm text-gray-500 sm:text-left md:text-sm">50k+ Subscribers</p>
-              </div>
-            </div>
-
-            <div class="text" style="color: white;"><video src="carri.mp4" style="border-radius: 7px;" controls></video>
-            </div>
-
-            <!-- <div class="text-center text-gray-100">“Your creative touch is pure magic! Thank you for turning my
-              project
-              into a visual masterpiece.”</div> -->
-          </div>
-          <!-- quote - end -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="meeting">
-    <div class="meetingText">Up for a chat?</div>
-
-    <a href="https://calendly.com/cutsbyaman/30min" target="_blank">
-      <div class="meetingBtn"><b>Click to Connect</b></div>
-    </a>
-  </div>
-
-  <div class="footer">
-    <div class="bg-black pt-4 sm:pt-10 lg:pt-12">
-      <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="flex flex-col items-center border-t border-slate-800 pt-6">
-          <!-- social - start -->
-          <div class="flex gap-4">
-            <a href="https://www.instagram.com/cutsbyaman/" target="_blank"
-              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-              <svg class=width="30" height="30" viewBox="0 0 24 24" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
-            </a>
-
-            <a href="https://twitter.com/cutsbyaman" target="_blank"
-              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-              <svg class=width="30" height="30" viewBox="0 0 24 24" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-              </svg>
-            </a>
-
-            <a href="https://www.linkedin.com/in/aman-raj-105b5922a/" target="_blank"
-              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-              <svg class=width="30" height="30" viewBox="0 0 24 24" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-
-            <a href="https://wa.me/qr/ZOYFZXPEZ3OIJ1" target="_blank"
-              class="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
-              <img src="whatsApp.svg" alt="">
-            </a>
-          </div>
-          <!-- social - end -->
-        </div>
-
-        <div class="py-8 text-center text-sm text-gray-400">© 2024 - Present Cuts by Aman. All rights reserved.</div>
-      </footer>
-    </div>
-  </div>
-
-
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Edit dreams into reality.'],
-      typeSpeed: 40,
-    });
-
-    function isElementInViewport(el) {
-      var rect = el.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    // Function to handle video playback based on visibility
-    function handleVideoVisibility() {
-      var videos = document.querySelectorAll('video');
-
-      videos.forEach(function (video) {
-        if (isElementInViewport(video.parentElement)) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
-    }
-
-    // Use Intersection Observer to detect when videos are in the viewport
-    var observer = new IntersectionObserver(handleVideoVisibility, { threshold: 0.9 });
-
-    // Observe each video element
-    document.querySelectorAll('video').forEach(function (video) {
-      observer.observe(video);
-    });
-
-    // Listen for scroll events to check video visibility
-    window.addEventListener('scroll', handleVideoVisibility);
-
-    // Initial check for video visibility
-    handleVideoVisibility();
-  </script>
-
-  <script>
-    // Function to handle scrolling animation
-    function scrollToTarget() {
-      const targetSection = document.querySelector("#testimonialHref");
-      const scrollLink = document.querySelector("#scroll-link");
-
-      // Prevent default anchor behavior
-      scrollLink.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        // Calculate the offset of the target section
-        const offsetTop = targetSection.offsetTop;
-
-        // Animate scroll to the target section
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth"
-        });
-      });
-    }
-
-    // Call the function when the DOM is loaded
-    document.addEventListener("DOMContentLoaded", scrollToTarget);
-  </script>
-
-  <script>
-    // Function to handle scrolling animation
-    function scrollToTarget() {
-      const targetSection = document.querySelector("videosHref");
-      const scrollLink = document.querySelector("#scroll-link");
-
-      // Prevent default anchor behavior
-      scrollLink.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        // Calculate the offset of the target section
-        const offsetTop = targetSection.offsetTop;
-
-        // Animate scroll to the target section
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth"
-        });
-      });
-    }
-
-    // Call the function when the DOM is loaded
-    document.addEventListener("DOMContentLoaded", scrollToTarget);
-  </script>
-
-
-
+  <script src="assets/js/site.js"></script>
 </body>
 
 </html>
